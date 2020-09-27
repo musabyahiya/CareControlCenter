@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CareControl_DataAccess", "CareControl_DataAccess\CareControl_DataAccess.csproj", "{D9D11362-1BB8-4B29-8EF8-BFD2F7D90D4E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CareControl_Repository", "CareControl_Repository\CareControl_Repository.csproj", "{4E9FB55F-9807-47BE-A248-6C5B122BA96B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CareControl_Service", "CareControl_Service\CareControl_Service.csproj", "{D7CBF2BF-A400-46E1-B0AF-FC0A12DE8266}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CareControl_Web", "CareControl_Web\CareControl_Web.csproj", "{72A5CB8B-D525-45FC-8D87-F802C6B97072}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CareControl_WebAPI", "CareControl_WebAPI\CareControl_WebAPI.csproj", "{49E7C05F-5354-42EE-9413-9A270099AB09}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9D11362-1BB8-4B29-8EF8-BFD2F7D90D4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9D11362-1BB8-4B29-8EF8-BFD2F7D90D4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9D11362-1BB8-4B29-8EF8-BFD2F7D90D4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9D11362-1BB8-4B29-8EF8-BFD2F7D90D4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E9FB55F-9807-47BE-A248-6C5B122BA96B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E9FB55F-9807-47BE-A248-6C5B122BA96B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E9FB55F-9807-47BE-A248-6C5B122BA96B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E9FB55F-9807-47BE-A248-6C5B122BA96B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7CBF2BF-A400-46E1-B0AF-FC0A12DE8266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7CBF2BF-A400-46E1-B0AF-FC0A12DE8266}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7CBF2BF-A400-46E1-B0AF-FC0A12DE8266}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7CBF2BF-A400-46E1-B0AF-FC0A12DE8266}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72A5CB8B-D525-45FC-8D87-F802C6B97072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72A5CB8B-D525-45FC-8D87-F802C6B97072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72A5CB8B-D525-45FC-8D87-F802C6B97072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72A5CB8B-D525-45FC-8D87-F802C6B97072}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49E7C05F-5354-42EE-9413-9A270099AB09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49E7C05F-5354-42EE-9413-9A270099AB09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49E7C05F-5354-42EE-9413-9A270099AB09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49E7C05F-5354-42EE-9413-9A270099AB09}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1A6FB7D9-4DC1-4764-959E-B4CC46EDEEB9}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://estfusion.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CareControl_DataAccess\\CareControl_DataAccess.csproj
+		SccProjectName1 = CareControl_DataAccess
+		SccLocalPath1 = CareControl_DataAccess
+		SccProjectUniqueName2 = CareControl_Repository\\CareControl_Repository.csproj
+		SccProjectName2 = CareControl_Repository
+		SccLocalPath2 = CareControl_Repository
+		SccProjectUniqueName3 = CareControl_Service\\CareControl_Service.csproj
+		SccProjectName3 = CareControl_Service
+		SccLocalPath3 = CareControl_Service
+		SccProjectUniqueName4 = CareControl_Web\\CareControl_Web.csproj
+		SccProjectName4 = CareControl_Web
+		SccLocalPath4 = CareControl_Web
+		SccProjectUniqueName5 = CareControl_WebAPI\\CareControl_WebAPI.csproj
+		SccProjectName5 = CareControl_WebAPI
+		SccLocalPath5 = CareControl_WebAPI
+	EndGlobalSection
+EndGlobal
