@@ -1,0 +1,46 @@
+﻿<div class="iq-sidebar">
+    <div class="iq-sidebar-logo d-flex justify-content-between">
+        <a href="index.html">
+            <img src="~/images/logo.png" class="img-fluid" alt="">
+            <span>Care</span>
+        </a>
+        <div class="iq-menu-bt-sidebar">
+            <div class="iq-menu-bt align-self-center">
+                <div class="wrapper-menu">
+                    <div class="main-circle"><i class="ri-more-fill"></i></div>
+                    <div class="hover-circle"><i class="ri-more-2-fill"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sidebar-scrollbar">
+        <nav class="iq-sidebar-menu">
+            <ul id="iq-sidebar-toggle" class="iq-menu">
+                
+                <li class="iq-menu-title"><i class="ri-subtract-line"></i><span>Client Area</span></li>
+                <li>
+                    <a href="#mailbox" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-user-3-fill"></i><span>Service Users</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                    <ul id="mailbox" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                        <li>
+                            <a asp-area="" asp-controller="ClientArea" asp-action="AddServiceUser"><i class="ri-user-add-fill"></i>Add a New Service User</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="ClientArea" asp-action="RecordDeath"><i class="ri-edit-2-fill"></i> Record a Death </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="ClientArea" asp-action="ResidentLeaving"><i class="ri-edit-2-fill"></i>Resident is Leaving</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="ClientArea" asp-action="ReactivateResident"><i class="ri-edit-2-fill"></i>Reactivate a Resident</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="ClientArea" asp-action="RecordPlannedAbsence"><i class="ri-edit-2-fill"></i>Record Planned Absence</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+        <div class="p-3"></div>
+    </div>
+</div>
