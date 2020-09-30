@@ -37,4 +37,8 @@
     <None Include="wwwroot\Scripts\js\PagesJS\Nav.js" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CareControl_Service\CareControl_Service.csproj" />
+  </ItemGroup>
+
 </Project>

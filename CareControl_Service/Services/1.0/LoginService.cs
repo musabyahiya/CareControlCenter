@@ -7,74 +7,88 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using CareControl_Service.Constant;
+using Microsoft.AspNetCore.Http;
+using System.Linq;
 
 namespace CareControl_Service.Services._1._0
 {
-    class LoginService
+    public class LoginService
     {
         #region Object Initialization
         private const string ClassName = nameof(LoginService);
-        private IConfiguration _config;
+      
+
         #endregion
 
-        public LoginService(IConfiguration config)
-        {
-            _config = config;
+        public LoginService()
+        {///
+          
+
         }
 
 
 
-        public async Task<SingleModelResponse<LoginResponse>> AuthenticateUser(LoginRequest loginRequest)
+        public async Task<SingleModelResponse<LoginResponse>> AuthenticateUser(LoginRequest loginRequest, JWTEntity entity)
         {
             #region Object Initialization
             string source = ClassName + ".AuthenticateUser";
+
             var singleModelResponse = new SingleModelResponse<LoginResponse>();
-            LoginResponse response = new LoginResponse();
-         
+            singleModelResponse.Model = new LoginResponse();
+        
+
             #endregion
             try
             {
                 if (loginRequest.Email == "musabyahiya@hotmail.com") // authenticate
                 {
-                    response.Token = GenerateJSONWebToken(loginRequest);
-                    response.StatusCode = "200";
-                    response.ResponseCode = "0000";
-                    response.ResponseMessage = "Successfully Login.";
+                    singleModelResponse.Model.Token = GenerateJSONWebToken(loginRequest, entity);
+                    singleModelResponse.Model.StatusCode = Constant.Constant.Success;
+                    singleModelResponse.Model.ResponseCode = "0000";
+                    singleModelResponse.Model.ResponseMessage = "Successfully Login.";
+                    singleModelResponse.IsError = false;
                 }
                 else
                 {
-                    response.StatusCode = "401";
-                    response.ResponseCode = "9999";
-                    response.ResponseMessage = "Unauthorized.";
+                    singleModelResponse.Model.StatusCode = Constant.Constant.Unauthorized;
+                    singleModelResponse.Model.ResponseCode = "9999";
+                    singleModelResponse.Model.ResponseMessage = "Unauthorized.";
+                    singleModelResponse.IsError = true;
+
 
                 }
+
+
             }
             catch (Exception ex)
             {
-              
+
             }
-           
+
             return singleModelResponse;
         }
 
-        private string GenerateJSONWebToken(LoginRequest loginRequest)
+        private string GenerateJSONWebToken(LoginRequest loginRequest, JWTEntity entity)
         {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(entity.Key));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             var claims = new[] {
-                new Claim(JwtRegisteredClaimNames.Email, loginRequest.Email),
-       
+                new Claim("Email", loginRequest.Email),
+
 
             };
 
-            var token = new JwtSecurityToken(_config["Jwt:Issuer"],
-                _config["Jwt:Issuer"],
+            var token = new JwtSecurityToken(entity.Issuer,
+                entity.Issuer,
                 claims,
                 expires: DateTime.Now.AddMinutes(120),
                 signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
+      
     }
 }
